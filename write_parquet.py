@@ -7,4 +7,4 @@ sinr_dB = np.random.randn(T) + 5
 bigNum = np.arange(0,T,dtype='uint64') + (1 << 62)
 
 df = pd.DataFrame({'t_sec':t_sec, 'sinr_dB':sinr_dB, 'bigNum':bigNum})
-df.to_parquet(fname='data.parquet',compression='snappy')
+df.to_parquet(path='data.parquet',compression='snappy')
